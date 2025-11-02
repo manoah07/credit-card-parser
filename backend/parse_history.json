@@ -1,0 +1,36 @@
+[
+  {
+    "id": "2025-11-02T17:44:01.122988",
+    "filename": "ilide.info-creditcardstatement-pdf-pr_f6abcd08a1324635f205cb68a237b7cf.pdf",
+    "timestamp": "2025-11-02 17:44:01",
+    "result": {
+      "success": true,
+      "data": {
+        "issuer": "ICICI Bank",
+        "card_last4": "8002",
+        "statement_date": "13/07/2018",
+        "due_date": "01/08/2018",
+        "total_balance": "13429.57",
+        "minimum_payment": "680.00"
+      },
+      "extracted_fields": 5,
+      "total_fields": 5,
+      "success_rate": 100.0,
+      "method": "AI-Powered (Groq Llama-3.1)",
+      "insights": [
+        {
+          "type": "warning",
+          "title": "High Balance Alert",
+          "message": "Balance of \u20b913,429.57 is significant. Consider paying more than minimum.",
+          "priority": "high"
+        },
+        {
+          "type": "info",
+          "title": "Smart Payment Tip",
+          "message": "Pay \u20b91,119.13/month to save ~\u20b91,561.06 in interest",
+          "priority": "medium"
+        }
+      ]
+    }
+  }
+]
