@@ -272,11 +272,12 @@ def supported_issuers():
     issuers = ['HSBC', 'Chase', 'American Express', 'Citi', 'Discover', 'Capital One', 'Any Bank (AI-Powered)']
     return jsonify({'issuers': issuers})
 
+import os
+
 if __name__ == '__main__':
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("🚀 Credit Card Parser API Starting...")
-    print("="*70)
-    print("📍 API URL: http://localhost:5000")
+    print("=" * 70)
     print("🤖 Parser: AI-Powered (Groq Llama 3.1 8B Instant)")
     print("✨ Features:")
     print("   • AI-based extraction (works with any issuer)")
@@ -285,8 +286,9 @@ if __name__ == '__main__':
     print("   • Financial insights")
     print("   • Export to CSV/JSON/Excel")
     print("   • Statistics dashboard")
-    print("="*70)
+    print("=" * 70)
     print("\n⚠️  Make sure you have GROQ_API_KEY in .env file")
     print("   Get free API key: https://console.groq.com/keys\n")
-    
-    app.run(debug=True, port=5000)
+
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=False)
